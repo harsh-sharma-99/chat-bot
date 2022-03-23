@@ -1,8 +1,16 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import { createUseStyles, useTheme } from 'react-jss';
 import Button from '../src/components/Button'
 import Header from '../src/components/Header'
-import styles from '../styles/Home.module.css'
+
+const useStyles = createUseStyles(theme => ({
+  container: {
+    backgroundColor: theme.bg,
+    color: theme.text,
+    height: "100%",
+    width:"100%"
+  }
+}))
 
 export default function Home() {
 
@@ -10,13 +18,16 @@ export default function Home() {
     alert("hello");
   }
 
+  const theme = useTheme();
+  const classes = useStyles({theme})
+
   return (
-    <div className={styles.container}>
+    <div className={classes.container} >
       <Head>
-        <title>Whatsap App</title>
+        <title>Test App</title>
       </Head>
       <Header> Testing Themes </Header>
-      <Button onClick={handleClick}>toggle</Button>
+      <Button onClick={handleClick} color="yellow" >toggle</Button>
     </div>
   )
 }
