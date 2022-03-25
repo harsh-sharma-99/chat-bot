@@ -8,11 +8,8 @@ import makeStyles from '../src/styles/home';
 
 export default function Home() {
 
-
-
-  const theme = useTheme();
-  const classes = makeStyles({theme})
-
+  const classes = makeStyles();
+  
   return (
     <div className={classes.container} >
       <Head>

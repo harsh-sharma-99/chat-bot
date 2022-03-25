@@ -3,10 +3,11 @@ import { useTheme } from 'react-jss'
 import SecondContent from '../src/components/SecondContent'
 import makeStyles from "../src/styles/secondContent"
 
-const secondContent = () => {
+const SecondContent = () => {
 
   const theme = useTheme();  
   const classes = makeStyles({theme});
+ 
     
   return (
       <div className= {classes.secondaryContainer}>
@@ -18,4 +19,4 @@ const secondContent = () => {
   )
 }
 
-export default secondContent
+export default SecondContent
