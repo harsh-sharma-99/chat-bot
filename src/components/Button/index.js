@@ -1,18 +1,11 @@
 import React from 'react'
-import { createUseStyles } from 'react-jss'
-
-const useStyles = createUseStyles({
-    button: {
-        backgroundColor: "green",
-        padding: 10,
-        color: props => props.color,
-        border: "none",
-        cursor: "pointer"
-      }
-})
+import { useTheme } from 'react-jss';
+import makeStyles from '../../styles/button'
 
 const Button = props => {
-    const classes = useStyles(props); 
+
+    const theme = useTheme();
+    const classes = makeStyles({theme}); 
     
         return (
             <button className={classes.button} onClick={props.onClick}>{props.children}</button>
