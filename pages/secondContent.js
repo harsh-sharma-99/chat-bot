@@ -3,7 +3,7 @@ import { useTheme } from 'react-jss'
 import SecondContent from '../src/components/SecondContent'
 import makeStyles from "../src/styles/secondContent"
 
-const SecondContent = () => {
+const SecondContentPage = () => {
 
   const theme = useTheme();  
   const classes = makeStyles({theme});
@@ -19,4 +19,4 @@ const SecondContent = () => {
   )
 }
 
-export default SecondContent
+export default SecondContentPage
